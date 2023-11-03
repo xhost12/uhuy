@@ -1,0 +1,115 @@
+:root {
+  --primary: #ffffff;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Mochiy Pop One", sans-serif;
+  background-color: var(--bg);
+  color: rgb(252, 254, 255);
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 2%;
+  background-color: rgba(19, 13, 2, 0.281);
+  border-bottom: 3px solid #646363;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .logo {
+  font-size: 25px;
+  font-style: oblique;
+  color: #f7e9e0;
+}
+
+.navbar .logo span {
+  color: rgba(160, 91, 12, 0.8);
+  font-style: normal;
+  font-size: 22px;
+}
+
+.navbar .navbar-nav a {
+  font-family: sans-serif;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 18px;
+  margin: 8px;
+}
+
+.navbar .navbar-nav a:hover {
+  background-color: #2e2a26;
+  transition: 0.2s ease-in-out;
+  transition-delay: 0.1s;
+  border-radius: 2px;
+}
+
+.navbar .nav-extra a {
+  color: #ffffff;
+  margin: 0.2rem;
+}
+
+.navbar .nav-extra a:hover {
+  color: #333232;
+  transition: 0.2s;
+  margin: 0 0.5rem;
+}
+
+#align-justify {
+  display: none;
+}
+
+/* Media */
+
+/* PC */
+@media (max-width: 1366px) {
+  html {
+    font-size: 100%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62%;
+  }
+}
+/* Hengpong */
+@media (max-width: 450px) {
+  html {
+    background-color: var(--bg);
+  }
+
+  #align-justify {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #525151;
+    width: 30rem;
+    height: 100vh;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+}
